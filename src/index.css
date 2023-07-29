@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+  position: relative;
+  background-image: url('./assets/imgs/Hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(6, 48, 83, 60%);
+}
+
+.card__location::before,
+.card-area-img::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: rgba(59, 77, 129, 40%);
+  border-radius: 12px;
+}
+
+.info {
+  top: 15px;
+  left: 15px;
+}
+
+.category {
+  position: relative;
+  background-image: url('./assets/imgs/Category.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.category::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(6, 48, 83, 60%);
+}
