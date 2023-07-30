@@ -1,24 +1,16 @@
 import axios from "axios";
 
-export const useFetch = async (url) => {
+export const useFetch = async (url, params) => {
   try {
+    console.log("test fetch");
     const response = await axios.get(url, {
       headers: {
-        "X-RapidAPI-Key": "aae01abc3emsha73c8d08688ded1p1275acjsne6c5237181b9",
+        "X-RapidAPI-Key": "4cb711fb4amsh34a8679891bd0b6p16f5b5jsn803d8c49fefb",
         "X-RapidAPI-Host": "bayut.p.rapidapi.com",
       },
-      params: {
-        locationExternalIDs: "5002,6020",
-        purpose: "for-rent",
-        hitsPerPage: "25",
-        page: "0",
-        lang: "en",
-        sort: "city-level-score",
-        rentFrequency: "monthly",
-        categoryExternalID: "4",
-      },
+      params: params,
     });
-    const data = response.data.hits;
+    const data = response.data;
     return data;
   } catch (error) {
     console.log(error);

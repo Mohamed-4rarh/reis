@@ -1,6 +1,5 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import { useFetch } from "../hooks/useFetch";
-import { useState, useEffect } from "react";
 
 import {
   carParkImg,
@@ -12,23 +11,10 @@ import {
   shareImg,
 } from "../assets";
 
-const PropertiesCards = () => {
-  const [propertiesData, setPropertiesData] = useState([]);
-
-  useEffect(() => {
-    //fetch properties data from api
-    const GetData = async () => {
-      const response = await useFetch(
-        "https://bayut.p.rapidapi.com/properties/list"
-      );
-      setPropertiesData(response);
-    };
-    GetData();
-  }, []);
-
+const PropertiesCards = ({ propertiesData }) => {
   return (
     <section>
-      <div className="flex flex-wrap gap-3 justify-center">
+      <div className="flex flex-wrap gap-[30px] justify-center">
         {propertiesData.map((property) => (
           <Link key={property.id} to={property.externalID}>
             <div className="flex flex-col py-[15px] px-[13px] w-[380px] border-2 rounded-[10px] gap-5">

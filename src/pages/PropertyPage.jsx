@@ -10,18 +10,22 @@ const PropertyPage = () => {
   useEffect(() => {
     const GetData = async () => {
       const response = await useFetch(
-        `https://bayut.p.rapidapi.com/properties/detail/${externalID}`
+        "https://bayut.p.rapidapi.com/properties/detail",
+        { externalID }
       );
       setAllData(response);
     };
     GetData();
   }, [externalID]);
 
-  console.log();
+  console.log(allData);
 
   return (
     <section>
-      <div className=" text-center"></div>
+      <div className="">
+        <div className="property_img">{allData.area}</div>
+        <div className="property_info"></div>
+      </div>
     </section>
   );
 };
