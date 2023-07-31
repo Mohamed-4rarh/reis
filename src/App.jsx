@@ -23,13 +23,14 @@ export const properties = React.createContext();
 
 function App() {
   const [propertiesData, setPropertiesData] = useState([]);
+  const [page, setPage] = useState(0);
   useEffect(() => {
     //params of API get requist
     const getParams = {
       locationExternalIDs: "5002,6020",
       purpose: "for-rent",
-      hitsPerPage: "25",
-      page: "0",
+      hitsPerPage: "8",
+      page: page,
       lang: "en",
       sort: "city-level-score",
       rentFrequency: "monthly",
@@ -44,14 +45,14 @@ function App() {
       setPropertiesData(response.hits);
     };
     GetData();
-  }, []);
+  }, [page]);
 
   const routes = createBrowserRouter(
     createRoutesFromElements(
       <Route
         path="/"
         element={
-          <properties.Provider value={propertiesData}>
+          <properties.Provider value={{ propertiesData, page, setPage }}>
             <Root />
           </properties.Provider>
         }
