@@ -33,7 +33,6 @@ const Properties = () => {
           className=" flex justify-center gap-5 mt-[80px]"
           previousLabel={"<"}
           nextLabel={">"}
-          selectedPageRel={searchParams.get("page")}
           pageCount={4}
           onPageChange={handlePaginate}
           previousClassName="bg-[#EDEFF6] text-[#6D737A] w-[40px] h-[40px] flex items-center justify-center rounded-[4px]"
