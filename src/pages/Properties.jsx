@@ -2,7 +2,6 @@ import HeadTitle from "../components/HeadTitle";
 import PropertiesCards from "../components/PropertiesCards";
 import { properties } from "../App";
 import { useContext } from "react";
-
 import ReactPaginate from "react-paginate";
 import { useSearchParams } from "react-router-dom";
 
@@ -10,10 +9,10 @@ const Properties = () => {
   const { propertiesData, setPage } = useContext(properties);
   const [searchParams, setSearchParams] = useSearchParams();
 
-  setPage(searchParams.get("page"));
   const handlePaginate = (data) => {
     const currentPage = data.selected;
     setSearchParams({ page: currentPage });
+    setPage(searchParams.get('page'));
   };
 
   return (

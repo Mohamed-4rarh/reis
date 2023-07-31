@@ -31,7 +31,7 @@ const PropertiesCards = ({ propertiesData }) => {
                   {property.isVerified ? "verified" : "not verified"}
                 </span>
               </div>
-              <p className="text-[#6D737A] max-w-[300px] h-[50px]">
+              <p className="text-[#6D737A] max-w-[300px]">
                 {property.title}
               </p>
               <div className=" flex flex-row justify-between text-[#6D737A]">

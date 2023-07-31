@@ -5,9 +5,9 @@ export const useFetch = async (url, params) => {
     console.log("test fetch");
     const response = await axios.get(url, {
       headers: {
-        "X-RapidAPI-Key": "4cb711fb4amsh34a8679891bd0b6p16f5b5jsn803d8c49fefb",
-        "X-RapidAPI-Host": "bayut.p.rapidapi.com",
-      },
+    'X-RapidAPI-Key': 'aae01abc3emsha73c8d08688ded1p1275acjsne6c5237181b9',
+    'X-RapidAPI-Host': 'bayut.p.rapidapi.com'
+    },
       params: params,
     });
     const data = response.data;

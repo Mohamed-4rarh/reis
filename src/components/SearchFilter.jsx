@@ -1,23 +1,42 @@
+import { useState, useContext } from 'react'
 import Button from './Button'
+import { useNavigate } from 'react-router-dom';
+import { properties } from '../App';
 
 const SearchFilter = () => {
+    const {setGetFrequency, setGetPurpose, setGetLang, page} = useContext(properties) //get data from the cotext
+
+    const [purpose, setPurpose] = useState('for-rent'); //to control purpose selection value
+    const [frequency, setFrequency] = useState('monthly'); //to control frequency selection value
+    const [lang, setLang] = useState('en'); //to control language selection value
+    const navigate = useNavigate(); //to navigate the link, import useNave in value named navigate
+
+    const handleSearch = () => {
+        navigate({
+            pathname: '/properties',
+            search: `?page=${page}&purpose=${purpose}&frequency=${frequency}&lang=${lang}`
+        })
+        setGetFrequency(frequency)
+        setGetPurpose(purpose)
+        setGetLang(lang)
+    }
     return (
         <div className='bg-[#ffffff] py-8 px-14 mt-6 mx-auto max-w-[1400px] justify-between flex flex-1 rounded-md'>
             <div className='items-center'>
                 <h4 className='flex-1 font-semibold text-lg text-[#2C3A61] mb-2'>Purpose</h4>
                 <div>
-                    <label className='text-[#889099]' htmlFor="city">Select Property Type</label>
-                    <select className=' cursor-pointer text-[#4A60A1]' name="city" id="1">
-                        <option value="for Rent">For Rent</option>
-                        <option value="for Rent">For Sale</option>
+                    <label className='text-[#889099]' htmlFor="purpose">Select Property Type</label>
+                    <select onChange={(e) => setPurpose(e.target.value)} className=' cursor-pointer text-[#4A60A1]' name="purpose" id="1">
+                        <option value="for-rent">For Rent</option>
+                        <option value="for-sale">For Sale</option>
                     </select>
                 </div>
             </div>
             <div className='items-center'>
                 <h4 className='flex-1 font-semibold text-lg text-[#2C3A61] mb-2'>Frequency</h4>
                 <div>
-                    <label className='text-[#889099]' htmlFor="city">Rent Frequency</label>
-                    <select className=' cursor-pointer text-[#4A60A1]' name="city" id="1">
+                    <label className='text-[#889099]' htmlFor="frequency">Rent Frequency</label>
+                    <select onChange={(e) => setFrequency(e.target.value)} className=' cursor-pointer text-[#4A60A1]' name="frequency" id="2">
                         <option value="monthly">Monthly</option>
                         <option value="yearly">Yearly</option>
                         <option value="weekly">Weekly</option>
@@ -28,14 +47,14 @@ const SearchFilter = () => {
             <div className='items-center'>
                 <h4 className='flex-1 font-semibold text-lg text-[#2C3A61] mb-2'>Language</h4>
                 <div>
-                    <label className='text-[#889099]' htmlFor="city">Select Your Language</label>
-                    <select className=' cursor-pointer text-[#4A60A1]' name="city" id="1">
+                    <label className='text-[#889099]' htmlFor="lang">Select Your Language</label>
+                    <select onChange={(e) => setLang(e.target.value)} className=' cursor-pointer text-[#4A60A1]' name="lang" id="3">
                         <option value="en">English</option>
                         <option value="ar">Arabic</option>
                     </select>
                 </div>
             </div>
-            <Button text={'Search'} bg={'bg-[#4a60a1]'} color={'text-[#ffffff]'}/>
+            <Button onClick={handleSearch} text={'Search'} bg={'bg-[#4a60a1]'} color={'text-[#ffffff]'}/>
         </div>
     )
 }

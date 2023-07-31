@@ -24,18 +24,26 @@ export const properties = React.createContext();
 function App() {
   const [propertiesData, setPropertiesData] = useState([]);
   const [page, setPage] = useState(0);
+  const [getFrequency, setGetFrequency] = useState('monthly')
+  const [getPurpose, setGetPurpose] = useState('fore-rent')
+  const [getLang, setGetLang] = useState('en')
+
   useEffect(() => {
     //params of API get requist
     const getParams = {
       locationExternalIDs: "5002,6020",
-      purpose: "for-rent",
+      purpose: getPurpose,
       hitsPerPage: "8",
       page: page,
-      lang: "en",
+      lang: getLang,
       sort: "city-level-score",
-      rentFrequency: "monthly",
+      rentFrequency: getFrequency,
       categoryExternalID: "4",
     };
+    console.log(page)
+    console.log(getFrequency)
+    console.log(getPurpose)
+    console.log(getLang)
     //fetch properties data from api
     const GetData = async () => {
       const response = await useFetch(
@@ -45,14 +53,14 @@ function App() {
       setPropertiesData(response.hits);
     };
     GetData();
-  }, [page]);
+  }, [page, getFrequency, getPurpose, getLang]);
 
   const routes = createBrowserRouter(
     createRoutesFromElements(
       <Route
         path="/"
         element={
-          <properties.Provider value={{ propertiesData, page, setPage }}>
+          <properties.Provider value={{ propertiesData, page, setPage, setGetFrequency, setGetPurpose, setGetLang }}>
             <Root />
           </properties.Provider>
         }
