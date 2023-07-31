@@ -7,9 +7,8 @@ import { properties } from "../App";
 import { Link } from "react-router-dom";
 
 const SearchByRent = () => {
-  const allProperties = useContext(properties);
-  const targetData = allProperties.slice(0, 4);
-
+  const { propertiesData } = useContext(properties);
+  const targetData = propertiesData.slice(0, 4);
   return (
     <section className="py-[85px]">
       <div className="flex flex-col gap-11 items-center">

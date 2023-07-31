@@ -4,13 +4,16 @@ import { properties } from "../App";
 import { useContext } from "react";
 
 import ReactPaginate from "react-paginate";
+import { useSearchParams } from "react-router-dom";
 
 const Properties = () => {
-  const { propertiesData, page, setPage } = useContext(properties);
+  const { propertiesData, setPage } = useContext(properties);
+  const [searchParams, setSearchParams] = useSearchParams();
 
+  setPage(searchParams.get("page"));
   const handlePaginate = (data) => {
     const currentPage = data.selected;
-    setPage(currentPage);
+    setSearchParams({ page: currentPage });
   };
 
   return (
@@ -30,6 +33,7 @@ const Properties = () => {
           className=" flex justify-center gap-5 mt-[80px]"
           previousLabel={"<"}
           nextLabel={">"}
+          selectedPageRel={searchParams.get("page")}
           pageCount={4}
           onPageChange={handlePaginate}
           previousClassName="bg-[#EDEFF6] text-[#6D737A] w-[40px] h-[40px] flex items-center justify-center rounded-[4px]"
