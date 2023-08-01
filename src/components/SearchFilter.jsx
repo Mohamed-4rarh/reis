@@ -21,8 +21,8 @@ const SearchFilter = () => {
             <div className='flex flex-col sm:flex-row lg:flex-col lg:items-start'>
                 <h4 className='flex-1 font-semibold text-lg text-[#2C3A61] mb-2'>Purpose</h4>
                 <div>
-                    <label className='text-[#889099]' htmlFor="purpose">Select Property Type</label>
-                    <select onChange={(e) => setPurpose(e.target.value)} className=' cursor-pointer text-[#4A60A1]' name="purpose" id="1">
+                    <label className='text-[#889099]' htmlFor="purpose">Property Type</label>
+                    <select onChange={(e) => setPurpose(e.target.value)} className='bg-white cursor-pointer text-[#4A60A1]' name="purpose" id="1">
                         <option value="for-rent">For Rent</option>
                         <option value="for-sale">For Sale</option>
                     </select>
@@ -32,7 +32,7 @@ const SearchFilter = () => {
                 <h4 className='flex-1 font-semibold text-lg text-[#2C3A61] mb-2'>Frequency</h4>
                 <div>
                     <label className='text-[#889099]' htmlFor="frequency">Rent Frequency</label>
-                    <select onChange={(e) => setFrequency(e.target.value)} className=' cursor-pointer text-[#4A60A1]' name="frequency" id="2">
+                    <select onChange={(e) => setFrequency(e.target.value)} className='bg-white cursor-pointer text-[#4A60A1]' name="frequency" id="2">
                         <option value="monthly">Monthly</option>
                         <option value="yearly">Yearly</option>
                         <option value="weekly">Weekly</option>
@@ -43,8 +43,8 @@ const SearchFilter = () => {
             <div className='flex flex-col sm:flex-row lg:flex-col lg:items-start'>
                 <h4 className='flex-1 font-semibold text-lg text-[#2C3A61] mb-2'>Language</h4>
                 <div>
-                    <label className='text-[#889099]' htmlFor="lang">Select Your Language</label>
-                    <select onChange={(e) => setLang(e.target.value)} className=' cursor-pointer text-[#4A60A1]' name="lang" id="3">
+                    <label className='text-[#889099]' htmlFor="lang">Select Language</label>
+                    <select onChange={(e) => setLang(e.target.value)} className='bg-white cursor-pointer text-[#4A60A1]' name="lang" id="3">
                         <option value="en">English</option>
                         <option value="ar">Arabic</option>
                     </select>

@@ -8,7 +8,9 @@ const Navbar = () => {
   return (
     <div className="w-full py-5 px-5 sm:px-20 justify-center bg-white shadow-lg z-10">
       <nav className="flex items-center justify-between">
-        <img src={logo} alt="reis" />
+        <Link to='/'>
+          <img src={logo} alt="reis" />
+        </Link>
         <ul className="lg:flex hidden">
           {navLinks.map((nav, index) => (
             <li

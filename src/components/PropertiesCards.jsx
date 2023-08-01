@@ -20,7 +20,6 @@ const PropertiesCards = ({hitsPerPage, hasPaginate}) => {
   const [propertiesData, setPropertiesData] = useState([])
   const [page, setPage] = useState(0)
 
-  
   useEffect(() => {
     const apiParams = {
       locationExternalIDs: "5002,6020",
@@ -41,13 +40,17 @@ const PropertiesCards = ({hitsPerPage, hasPaginate}) => {
 
   const handlePaginate = (data) => {
     setPage(data.selected)
+    setSearchParams(prev => {
+      prev.set('page', page)
+      return prev
+    })
   }
 
   return (
     <section>
       <div className="flex flex-wrap gap-[30px] justify-center">
         {propertiesData.map((property) => (
-          <Link key={property.id} to={property.externalID}>
+          <Link key={property.id} to={`/properties/${property.externalID}`}>
             <div className="flex flex-col py-[15px] px-[13px] w-[380px] border-2 rounded-[10px] gap-5">
               <img
                 className="w-full h-[200px] rounded-[10px]"

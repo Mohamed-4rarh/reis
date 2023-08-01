@@ -10,11 +10,6 @@ import sellIcon from "./icons/Icon1.png";
 import rentIcon from "./icons/Icon2.png";
 import buyIcon from "./icons/Icon3.png";
 import marketingIcon from "./icons/Icon4.png";
-import propertyImg1 from "./imgs/Property image1.jpg";
-import propertyImg2 from "./imgs/Property image2.jpg";
-import propertyImg3 from "./imgs/Property image3.jpg";
-import propertyImg4 from "./imgs/Property image4.jpg";
-import propertyImg5 from "./imgs/Property image5.jpg";
 import carParkImg from "./icons/CarPark.png";
 import bathtubImg from "./icons/Bathtub.png";
 import arrowsOutImg from "./icons/ArrowsOut.png";
@@ -51,11 +46,6 @@ export {
   rentIcon,
   buyIcon,
   marketingIcon,
-  propertyImg1,
-  propertyImg2,
-  propertyImg3,
-  propertyImg4,
-  propertyImg5,
   carParkImg,
   bathtubImg,
   personImg,
