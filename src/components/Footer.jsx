@@ -3,8 +3,8 @@ import { footerLinks, socialMediaIcons } from "../constants";
 
 const Footer = () => {
   return (
-    <section className="py-[50px] px-[100px]">
-      <div className="px-[100px] flex  flex-row justify-between">
+    <section className="py-[50px] sm:px-[100px] px-5">
+      <div className=" 2xl:px-[100px] flex flex-wrap justify-between">
         <div className="flex flex-col gap-[20px] items-start">
           <img src={logo} alt="logo" />
           <div className="flex flex-col gap-[13px]">
@@ -34,7 +34,7 @@ const Footer = () => {
           </div>
         </div>
         {footerLinks.map((link, index) => (
-          <div className="flex flex-col gap-8" key={index}>
+          <div className="flex flex-col gap-8 my-5 sm:my-0" key={index}>
             <h4 className="text-[#1B1D1F] font-semibold text-xl capitalize">
               {link.title}
             </h4>

@@ -14,6 +14,7 @@ import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import PropertyPage from "./pages/PropertyPage";
 import Root from "./layouts/Root";
+import ContactUs from "./components/ContactUs";
 
 function App() {
   const routes = createBrowserRouter(
@@ -28,7 +29,7 @@ function App() {
         </Route>
         <Route path="gallery" element={<Gallery />} />
         <Route path="blog" element={<Blog />} />
-        <Route path="contact" element={<Contact />} />
+        <Route path="contact" element={<ContactUs />} />
       </Route>
     )
   );

@@ -33,8 +33,12 @@ import socialLink2 from "./icons/Social Media card2.png";
 import socialLink3 from "./icons/Social Media card3.png";
 import socialLink4 from "./icons/Social Media card4.png";
 import socialLink5 from "./icons/Social Media card5.png";
+import close from './icons/close.png';
+import menu from './icons/menu.png';
 
 export {
+  close,
+  menu,
   logo,
   heroBg,
   card1,

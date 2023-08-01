@@ -17,8 +17,8 @@ const SearchFilter = () => {
         
     }
     return (
-        <div className='bg-[#ffffff] py-8 px-14 mt-6 mx-auto max-w-[1400px] justify-between flex flex-1 rounded-md'>
-            <div className='items-center'>
+        <div className='bg-[#ffffff] py-8 px-14 mt-6 mx-auto max-w-[1350px] justify-between gap-5 flex lg:flex-row flex-col flex-1 rounded-md'>
+            <div className='flex flex-col sm:flex-row lg:flex-col lg:items-start'>
                 <h4 className='flex-1 font-semibold text-lg text-[#2C3A61] mb-2'>Purpose</h4>
                 <div>
                     <label className='text-[#889099]' htmlFor="purpose">Select Property Type</label>
@@ -28,7 +28,7 @@ const SearchFilter = () => {
                     </select>
                 </div>
             </div>
-            <div className='items-center'>
+            <div className='flex flex-col sm:flex-row lg:flex-col lg:items-start'>
                 <h4 className='flex-1 font-semibold text-lg text-[#2C3A61] mb-2'>Frequency</h4>
                 <div>
                     <label className='text-[#889099]' htmlFor="frequency">Rent Frequency</label>
@@ -40,7 +40,7 @@ const SearchFilter = () => {
                     </select>
                 </div>
             </div>
-            <div className='items-center'>
+            <div className='flex flex-col sm:flex-row lg:flex-col lg:items-start'>
                 <h4 className='flex-1 font-semibold text-lg text-[#2C3A61] mb-2'>Language</h4>
                 <div>
                     <label className='text-[#889099]' htmlFor="lang">Select Your Language</label>

@@ -55,17 +55,10 @@ export const navLinks = [
     title: "gallery",
   },
   {
-    id: "blog",
-    title: "blog",
-  },
-  {
     id: "contact",
     title: "contact us",
   },
-  {
-    id: "search",
-    title: "search",
-  },
+  
 ];
 
 export const cards = [
