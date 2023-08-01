@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 
 import {
   carParkImg,
@@ -10,8 +11,38 @@ import {
   addImg,
   shareImg,
 } from "../assets";
+import { useEffect, useState } from "react";
+import { useFetch } from "../hooks/useFetch";
+import ReactPaginate from "react-paginate";
 
-const PropertiesCards = ({ propertiesData }) => {
+const PropertiesCards = ({hitsPerPage, hasPaginate}) => {
+  let [searchParams, setSearchParams] = useSearchParams();
+  const [propertiesData, setPropertiesData] = useState([])
+  const [page, setPage] = useState(0)
+
+  
+  useEffect(() => {
+    const apiParams = {
+      locationExternalIDs: "5002,6020",
+      purpose: searchParams.get('purpose') || 'for-rent',
+      hitsPerPage: hitsPerPage || 25,
+      page: page,
+      lang: searchParams.get('lang') || 'en',
+      sort: "city-level-score",
+      rentFrequency: searchParams.get('frequency') || 'monthly',
+      categoryExternalID: "4",
+    }
+    const GetData = async () => {
+      const response = await useFetch("https://bayut.p.rapidapi.com/properties/list",apiParams)
+      setPropertiesData(response.hits)
+    }
+    GetData();
+  }, [page, hitsPerPage, searchParams])
+
+  const handlePaginate = (data) => {
+    setPage(data.selected)
+  }
+
   return (
     <section>
       <div className="flex flex-wrap gap-[30px] justify-center">
@@ -78,8 +109,24 @@ const PropertiesCards = ({ propertiesData }) => {
           </Link>
         ))}
       </div>
+      { hasPaginate && (
+        <ReactPaginate
+          className=" flex justify-center gap-5 mt-[80px]"
+          previousLabel={"<"}
+          nextLabel={">"}
+          pageCount={4}
+          onPageChange={handlePaginate}
+          previousClassName="bg-[#EDEFF6] text-[#6D737A] w-[40px] h-[40px] flex items-center justify-center rounded-[4px]"
+          nextClassName="bg-[#4A60A1] text-[#fff] w-[40px] h-[40px] flex items-center justify-center rounded-[4px]"
+          activeClassName="bg-[#4A60A1] text-[#fff] "
+          pageClassName="font-semibold text-[#4A60A1] w-[40px] h-[40px] flex items-center justify-center rounded-[4px]"
+        /> 
+      )
+      }
     </section>
   );
 };
 
 export default PropertiesCards;
+
+ 

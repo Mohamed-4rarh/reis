@@ -2,10 +2,10 @@ import axios from "axios";
 
 export const useFetch = async (url, params) => {
   try {
-    console.log("test fetch");
+    console.log("fetching...");
     const response = await axios.get(url, {
       headers: {
-    'X-RapidAPI-Key': 'aae01abc3emsha73c8d08688ded1p1275acjsne6c5237181b9',
+    'X-RapidAPI-Key': 'b88fb84a70msh4dad4efbd7f7061p1692c3jsnd3aec78be49e',
     'X-RapidAPI-Host': 'bayut.p.rapidapi.com'
     },
       params: params,

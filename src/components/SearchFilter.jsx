@@ -1,10 +1,8 @@
-import { useState, useContext } from 'react'
+import { useState } from 'react'
 import Button from './Button'
 import { useNavigate } from 'react-router-dom';
-import { properties } from '../App';
 
 const SearchFilter = () => {
-    const {setGetFrequency, setGetPurpose, setGetLang, page} = useContext(properties) //get data from the cotext
 
     const [purpose, setPurpose] = useState('for-rent'); //to control purpose selection value
     const [frequency, setFrequency] = useState('monthly'); //to control frequency selection value
@@ -14,11 +12,9 @@ const SearchFilter = () => {
     const handleSearch = () => {
         navigate({
             pathname: '/properties',
-            search: `?page=${page}&purpose=${purpose}&frequency=${frequency}&lang=${lang}`
+            search: `?purpose=${purpose}&frequency=${frequency}&lang=${lang}`
         })
-        setGetFrequency(frequency)
-        setGetPurpose(purpose)
-        setGetLang(lang)
+        
     }
     return (
         <div className='bg-[#ffffff] py-8 px-14 mt-6 mx-auto max-w-[1400px] justify-between flex flex-1 rounded-md'>

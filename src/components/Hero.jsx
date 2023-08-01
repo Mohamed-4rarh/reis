@@ -12,9 +12,7 @@ const Hero = () => {
             <Button text={'Rent'} bg={'bg-[#4a60a1]'} color={'text-[#ffffff]'}/>
             <Button text={'Sale'} bg={'bg-[#ffffff]'} color={'text-[#4a60a1]'}/>
           </div>
-          <div>
             <SearchFilter />
-          </div>
         </div>
       </div>
     </div>
