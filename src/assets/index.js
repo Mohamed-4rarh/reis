@@ -10,28 +10,29 @@ import sellIcon from "./icons/Icon1.png";
 import rentIcon from "./icons/Icon2.png";
 import buyIcon from "./icons/Icon3.png";
 import marketingIcon from "./icons/Icon4.png";
-import carParkImg from "./icons/CarPark.png";
-import bathtubImg from "./icons/Bathtub.png";
-import arrowsOutImg from "./icons/ArrowsOut.png";
-import personImg from "./icons/personImg.jpg";
-import shareImg from "./icons/Share.png";
-import favImg from "./icons/Favorite.png";
-import addImg from "./icons/Add.png";
+import carParkImg from "./icons/Car.svg";
+import bathtubImg from "./icons/Bathtub.svg";
+import arrowsOutImg from "./icons/ArrowsOut.svg";
+import shareImg from "./icons/Share.svg";
+import favImg from "./icons/Favorite.svg";
+import addImg from "./icons/Add.svg";
 import locationCard1 from "./imgs/LocationCard 1.jpg";
 import locationCard2 from "./imgs/LocationCard 2.jpg";
 import locationCard3 from "./imgs/LocationCard 3.jpg";
 import locationCard4 from "./imgs/LocationCard 4.jpg";
 import mapPin from "./icons/MapPin.png";
 import arrowsLocation from "./icons/ArrowsOutlocation.png";
-import socialLink1 from "./icons/Social Media card1.png";
-import socialLink2 from "./icons/Social Media card2.png";
-import socialLink3 from "./icons/Social Media card3.png";
-import socialLink4 from "./icons/Social Media card4.png";
-import socialLink5 from "./icons/Social Media card5.png";
-import close from './icons/close.png';
-import menu from './icons/menu.png';
+import socialLink1 from "./icons/Social Media card1.svg";
+import socialLink2 from "./icons/Social Media card2.svg";
+import socialLink3 from "./icons/Social Media card3.svg";
+import socialLink4 from "./icons/Social Media card4.svg";
+import socialLink5 from "./icons/Social Media card5.svg";
+import close from './icons/close.svg';
+import menu from './icons/menu.svg';
+import personImg from './imgs/personImg.svg'
 
 export {
+  personImg,
   close,
   menu,
   logo,
@@ -48,7 +49,6 @@ export {
   marketingIcon,
   carParkImg,
   bathtubImg,
-  personImg,
   arrowsOutImg,
   shareImg,
   favImg,
