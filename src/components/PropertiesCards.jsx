@@ -48,10 +48,10 @@ const PropertiesCards = ({hitsPerPage, hasPaginate}) => {
 
   return (
     <section>
-      <div className="flex flex-wrap gap-[30px] justify-center">
+      <div className="flex flex-wrap gap-[30px] px-4 justify-center">
         {propertiesData.map((property) => (
           <Link key={property.id} to={`/properties/${property.externalID}`}>
-            <div className="flex flex-col py-[15px] px-[13px] w-[380px] border-2 rounded-[10px] gap-5">
+            <div className="flex flex-col py-[15px] px-[13px] w-[370px] border-2 rounded-[10px] gap-5">
               <img
                 className="w-full h-[200px] rounded-[10px]"
                 src={property.coverPhoto.url}

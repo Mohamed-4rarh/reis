@@ -6,7 +6,7 @@ import { useState } from "react";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
   return (
-    <div className="w-full py-5 px-5 sm:px-20 justify-center bg-white shadow-lg z-10">
+    <div className="w-full py-5 px-5 sm:px-20 justify-center bg-white shadow-lg z-10 sticky top-0 w-full">
       <nav className="flex items-center justify-between">
         <Link to='/'>
           <img src={logo} alt="reis" />
