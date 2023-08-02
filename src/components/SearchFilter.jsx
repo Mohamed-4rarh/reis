@@ -22,7 +22,7 @@ const SearchFilter = () => {
                 <h4 className='flex-1 font-semibold text-lg text-[#2C3A61] mb-2'>Purpose</h4>
                 <div>
                     <label className='text-[#889099]' htmlFor="purpose">Property Type</label>
-                    <select onChange={(e) => setPurpose(e.target.value)} className='bg-white cursor-pointer text-[#4A60A1]' name="purpose" id="1">
+                    <select onChange={(e) => setPurpose(e.target.value)} className='bg-white cursor-pointer text-[#4A60A1]' name="purpose" id="purpose__selection">
                         <option value="for-rent">For Rent</option>
                         <option value="for-sale">For Sale</option>
                     </select>
@@ -32,7 +32,7 @@ const SearchFilter = () => {
                 <h4 className='flex-1 font-semibold text-lg text-[#2C3A61] mb-2'>Frequency</h4>
                 <div>
                     <label className='text-[#889099]' htmlFor="frequency">Rent Frequency</label>
-                    <select onChange={(e) => setFrequency(e.target.value)} className='bg-white cursor-pointer text-[#4A60A1]' name="frequency" id="2">
+                    <select onChange={(e) => setFrequency(e.target.value)} className='bg-white cursor-pointer text-[#4A60A1]' name="frequency" id="frequency__selection">
                         <option value="monthly">Monthly</option>
                         <option value="yearly">Yearly</option>
                         <option value="weekly">Weekly</option>
@@ -44,7 +44,7 @@ const SearchFilter = () => {
                 <h4 className='flex-1 font-semibold text-lg text-[#2C3A61] mb-2'>Language</h4>
                 <div>
                     <label className='text-[#889099]' htmlFor="lang">Set Language</label>
-                    <select onChange={(e) => setLang(e.target.value)} className='bg-white cursor-pointer text-[#4A60A1]' name="lang" id="3">
+                    <select onChange={(e) => setLang(e.target.value)} className='bg-white cursor-pointer text-[#4A60A1]' name="lang" id="lang__selection">
                         <option value="en">English</option>
                         <option value="ar">Arabic</option>
                     </select>

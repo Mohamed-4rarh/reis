@@ -1,5 +1,6 @@
 import HeadTitle from "../components/HeadTitle";
 import PropertiesCards from "../components/PropertiesCards";
+import PropertiesFilter from '../components/PropertiesFilter'
 
 const Properties = () => {
   return (
@@ -13,7 +14,8 @@ const Properties = () => {
           />
         </div>
       </div>
-      <div className="py-[150px] items-center">
+      <PropertiesFilter />
+      <div className="py-[50px] items-center">
         <PropertiesCards hitsPerPage={8} hasPaginate={true} />
       </div>
     </section>
