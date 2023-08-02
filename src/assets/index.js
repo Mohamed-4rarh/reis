@@ -30,8 +30,12 @@ import socialLink5 from "./icons/Social Media card5.svg";
 import close from './icons/close.svg';
 import menu from './icons/menu.svg';
 import personImg from './imgs/personImg.svg'
+import whatsapp from './icons/whatsapp.svg';
+import mobile from './icons/mobile.svg'
 
 export {
+  mobile,
+  whatsapp,
   personImg,
   close,
   menu,

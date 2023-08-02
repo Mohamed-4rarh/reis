@@ -101,11 +101,7 @@ const PropertiesCards = ({hitsPerPage, hasPaginate}) => {
                 <div className="flex gap-2 items-center">
                   <img className="w-[20px] h-[20px]" src={addImg} alt="add" />
                   <img className="w-[20px] h-[20px]" src={favImg} alt="fav" />
-                  <img
-                    className="w-[20px] h-[20px]"
-                    src={shareImg}
-                    alt="share"
-                  />
+                  <img className="w-[20px] h-[20px]" src={shareImg} alt="share" />
                 </div>
               </div>
             </div>
