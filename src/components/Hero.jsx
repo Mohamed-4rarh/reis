@@ -1,9 +1,16 @@
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import Button from "./Button"
 import HeadTitle from "./HeadTitle"
 import SearchFilter from "./SearchFilter"
 
 const Hero = () => {
+  const navigate = useNavigate();
+  const handleSale = () => {
+    navigate({
+      pathname: '/properties',
+      search: '?purpose=for-sale'
+    })
+  }
   return (
     <div className="hero">
       <div className='py-[120px] px-[30px] relative'>
@@ -13,7 +20,7 @@ const Hero = () => {
             <Link to={'properties'}>
               <Button text={'Rent'} bg={'bg-[#4a60a1]'} color={'text-[#ffffff]'}/>
             </Link>
-            <Button text={'Sale'} bg={'bg-[#ffffff]'} color={'text-[#4a60a1]'}/>
+            <Button onClick={handleSale} text={'Sale'} bg={'bg-[#ffffff]'} color={'text-[#4a60a1]'}/>
           </div>
             <SearchFilter />
         </div>
