@@ -15,7 +15,7 @@ const PropertiesFilter = () => {
   }
   return (
     <div className="py-[30px] bg-[#EDEFF6]">
-      <div className="flex flex-wrap justify-center gap-6 items-center">
+      <div className="flex flex-wrap justify-center sm:gap-6 gap-2 items-center">
         <div className="flex gap-1">
           <label
             className="text-[#6d737a] font-semibold hidden sm:block"
