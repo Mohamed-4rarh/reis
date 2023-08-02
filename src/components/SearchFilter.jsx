@@ -43,7 +43,7 @@ const SearchFilter = () => {
             <div className='flex flex-col sm:flex-row lg:flex-col lg:items-start'>
                 <h4 className='flex-1 font-semibold text-lg text-[#2C3A61] mb-2'>Language</h4>
                 <div>
-                    <label className='text-[#889099]' htmlFor="lang">Select Language</label>
+                    <label className='text-[#889099]' htmlFor="lang">Set Language</label>
                     <select onChange={(e) => setLang(e.target.value)} className='bg-white cursor-pointer text-[#4A60A1]' name="lang" id="3">
                         <option value="en">English</option>
                         <option value="ar">Arabic</option>
