@@ -1,4 +1,4 @@
-import logo from "./icons/Logo.png";
+import logo from "./icons/Logo.svg";
 import heroBg from "./imgs/Hero.jpg";
 import card1 from "./imgs/Card 1.jpg";
 import card2 from "./imgs/Card 2.jpg";
