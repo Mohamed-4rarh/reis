@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useFetch } from "../hooks/useFetch";
-import { addImg, arrowsOutImg, bathtubImg, carParkImg, favImg, personImg, shareImg } from "../assets";
+import { addImg, arrowsOutImg, bathtubImg, carParkImg, dLoadingGif, favImg, personImg, shareImg } from "../assets";
+import Loader from "../components/Loader";
 
 const PropertyPage = () => {
   const {externalID} = useParams();
@@ -17,7 +18,7 @@ const PropertyPage = () => {
 
   return (
     <section className="py-[85px] sm:px-[50px] items-center flex flex-col px-5 bg-[#EDEFF6]">
-      {propertyData && (
+      {propertyData ? (
         <div className="flex flex-col gap-10 xl:w-[1200px]">
           <div className="flex sm:gap-5 gap-3 overflow-x-auto">
             {propertyData.photos.map((photo) => (
@@ -95,7 +96,7 @@ const PropertyPage = () => {
             <span className="capitalize text-[#6d737a]">whatsapp: {propertyData.phoneNumber.whatsapp}</span>
           </div>
         </div>
-      )}
+      ): <Loader loadingGif={dLoadingGif} />}
     </section>
   );
 };
