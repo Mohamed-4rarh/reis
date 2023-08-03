@@ -27,7 +27,10 @@ const PropertiesFilter = () => {
             id="purpose__selection"
           >
             <option value="for-rent">
-              {searchParams.get("purpose") || 'For Rent'}
+              {searchParams.get("purpose") || 'Purpose'}
+            </option>
+            <option value="for-rent">
+              For Rent
             </option>
             <option value="for-sale">For Sale</option>
           </select>
@@ -46,7 +49,10 @@ const PropertiesFilter = () => {
             id="frequency__selection"
           >
             <option value={"monthly"}>
-              {searchParams.get("frequency") || 'Monthly'}
+              {searchParams.get("frequency") || 'Frequency'}
+            </option>
+            <option value={"monthly"}>
+              Monthly
             </option>
             <option value="yearly">Yearly</option>
             <option value="weekly">Weekly</option>
@@ -65,9 +71,12 @@ const PropertiesFilter = () => {
             className="bg-[#edeff6] cursor-pointer text-[#4A60A1]"
             name="lang"
             id="lang__selection"
-          >
+          > 
             <option value={"en"} className=' capitalize'>
-              {searchParams.get("lang") || 'English'}
+              {searchParams.get("lang") || 'Language'}
+            </option>
+            <option value={"en"} className=' capitalize'>
+              English
             </option>
             <option value="ar">Arabic</option>
           </select>
