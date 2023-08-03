@@ -30,7 +30,7 @@ const Navbar = () => {
           ))}
         </ul>
         <ul className="sm:block hidden">
-          <Button text="Sign Up" color={"text-[#4a60a1]"} bg={"bg-[#Fff]"} />
+          <Button text="Sign Up" color={"text-[#4a60a1]"} bg={"bg-[#Fff] mr-1"} />
           <Button text="Log In" color={"text-[#FFF]"} bg={"bg-[#4a60a1]"} />
         </ul>
         <div className="lg:hidden block">
