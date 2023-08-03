@@ -7,12 +7,13 @@ const GalleryHits = () => {
     const [galleryHits, setGalleryHits] = useState([])
     const [hits, setHits] = useState([])
     const [imgs, setImgs] = useState(5)
+    const [page, setPage] = useState(0)
     useEffect(() => {
     const apiParams = {
       locationExternalIDs: "5002,6020",
       purpose: 'for-rent',
       hitsPerPage: 25,
-      page: 0,
+      page: page,
       lang: 'en',
       sort: "city-level-score",
       rentFrequency: 'monthly',
@@ -21,14 +22,21 @@ const GalleryHits = () => {
     const GetData = async () => {
       const response = await useFetch("https://bayut.p.rapidapi.com/properties/list",apiParams)
       setGalleryHits(response.hits)
+      setImgs(5)
     }
     GetData();
-  }, [])
+  }, [page])
 
   useEffect(() => {
     const slicedHits = galleryHits.slice(0, imgs);
-    setHits(slicedHits)
+    setHits(slicedHits);
   }, [imgs, galleryHits])
+
+  if(imgs == 30) {
+    setHits([])
+    setImgs(0)
+    setPage(page + 1);
+  }
 
   const handleImg = () => {
     setImgs(prev => prev + 5)
