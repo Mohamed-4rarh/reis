@@ -1,4 +1,4 @@
-import HeadTitle from './HeadTitle'
+import HeadTitle from '../components/HeadTitle'
 import { types } from '../constants'
 
 const SearchByType = () => {

@@ -1,9 +1,9 @@
-import Hero from "../components/Hero";
-import SearchByArea from "../components/SearchByArea";
-import SearchByType from "../components/SearchByType";
-import SearchByRent from "../components/SearchByRent";
-import SearchByLocation from "../components/SearchByLocation";
-import ContactUs from "../components/ContactUs";
+import Hero from "../sections/Hero";
+import SearchByArea from "../sections/SearchByArea";
+import SearchByType from "../sections/SearchByType";
+import SearchByRent from "../sections/SearchByRent";
+import SearchByLocation from "../sections/SearchByLocation";
+import ContactUs from "../sections/ContactUs";
 
 const Home = () => {
   return (

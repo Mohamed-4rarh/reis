@@ -1,5 +1,5 @@
-import HeadTitle from './HeadTitle'
-import Button from './Button'
+import HeadTitle from '../components/HeadTitle'
+import Button from '../components/Button'
 
 const ContactUs = () => {
   

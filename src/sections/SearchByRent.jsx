@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-import Button from "./Button";
-import HeadTitle from "./HeadTitle";
-import PropertiesCards from "./PropertiesCards";
+import Button from "../components/Button";
+import HeadTitle from "../components/HeadTitle";
+import PropertiesCards from "../components/PropertiesCards";
 
 const SearchByRent = () => {
   return (

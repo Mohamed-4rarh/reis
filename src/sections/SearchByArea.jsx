@@ -1,4 +1,4 @@
-import HeadTitle from './HeadTitle'
+import HeadTitle from '../components/HeadTitle'
 import { cards } from '../constants'
 
 const SearchByArea = () => {

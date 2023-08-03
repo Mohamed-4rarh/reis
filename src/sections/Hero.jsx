@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom"
-import Button from "./Button"
-import HeadTitle from "./HeadTitle"
-import SearchFilter from "./SearchFilter"
+import Button from "../components/Button"
+import HeadTitle from "../components/HeadTitle"
+import SearchFilter from "../components/SearchFilter"
 
 const Hero = () => {
   const navigate = useNavigate();
