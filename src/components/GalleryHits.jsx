@@ -1,9 +1,12 @@
 import { useState, useEffect } from 'react'
 import { useFetch } from '../hooks/useFetch'
 import Button from './Button'
+import Loader from './Loader';
+import { dLoadingGif } from '../assets';
 
 // eslint-disable-next-line react/prop-types
 const GalleryHits = () => {
+  const [loading, setLoading] = useState(true);
     const [galleryHits, setGalleryHits] = useState([])
     const [hits, setHits] = useState([])
     const [imgs, setImgs] = useState(5)
@@ -23,6 +26,7 @@ const GalleryHits = () => {
       const response = await useFetch("https://bayut.p.rapidapi.com/properties/list",apiParams)
       setGalleryHits(response.hits)
       setImgs(5)
+      setLoading(false)
     }
     GetData();
   }, [page])
@@ -36,6 +40,7 @@ const GalleryHits = () => {
     setHits([])
     setImgs(0)
     setPage(page + 1);
+    setLoading(true)
   }
 
   const handleImg = () => {
@@ -44,6 +49,7 @@ const GalleryHits = () => {
 
   return (
     <div className='flex flex-col gap-[100px] items-center'>
+      {loading && <Loader loadingGif={dLoadingGif} /> }
       <div className="flex gap-10 flex-wrap justify-center">
         {
           hits.map((hit) => (

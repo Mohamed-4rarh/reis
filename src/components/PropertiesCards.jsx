@@ -10,12 +10,15 @@ import {
   favImg,
   addImg,
   shareImg,
+  loadingGif,
 } from "../assets";
 import { useEffect, useState } from "react";
 import { useFetch } from "../hooks/useFetch";
 import ReactPaginate from "react-paginate";
+import Loader from "./Loader";
 
 const PropertiesCards = ({hitsPerPage, hasPaginate}) => {
+  const [loading, setLoading] = useState(true)
   let [searchParams, setSearchParams] = useSearchParams();
   const [propertiesData, setPropertiesData] = useState([])
   const [page, setPage] = useState(0)
@@ -34,6 +37,7 @@ const PropertiesCards = ({hitsPerPage, hasPaginate}) => {
     const GetData = async () => {
       const response = await useFetch("https://bayut.p.rapidapi.com/properties/list",apiParams)
       setPropertiesData(response.hits)
+      setLoading(false)
     }
     GetData();
   }, [page, hitsPerPage, searchParams])
@@ -49,6 +53,7 @@ const PropertiesCards = ({hitsPerPage, hasPaginate}) => {
   return (
     <section>
       <div className="flex flex-wrap gap-[30px] justify-center">
+        {loading && <Loader loadingGif={loadingGif} /> }
         {propertiesData.map((property) => (
           <Link key={property.id} to={`/properties/${property.externalID}`}>
             <div className="flex flex-col py-[15px] px-[13px] w-[350px] sm:w-[380px] border-2 rounded-[10px] gap-5">

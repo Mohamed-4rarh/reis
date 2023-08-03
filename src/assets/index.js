@@ -32,8 +32,12 @@ import menu from './icons/menu.svg';
 import personImg from './imgs/personImg.svg'
 import whatsapp from './icons/whatsapp.svg';
 import mobile from './icons/mobile.svg'
+import loadingGif from './icons/loading.gif'
+import dLoadingGif from './icons/dloading.gif'
 
 export {
+  loadingGif,
+  dLoadingGif,
   mobile,
   whatsapp,
   personImg,
