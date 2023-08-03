@@ -10,7 +10,6 @@ import Properties from "./pages/Properties";
 import Agents from "./pages/Agents";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
-import Blog from "./pages/Blog";
 import Contact from "./pages/Contact";
 import PropertyPage from "./pages/PropertyPage";
 import Root from "./layouts/Root";
@@ -27,7 +26,6 @@ function App() {
           <Route path=":externalID" element={<PropertyPage />} />
         </Route>
         <Route path="gallery" element={<Gallery />} />
-        <Route path="blog" element={<Blog />} />
         <Route path="contact" element={<Contact />} />
       </Route>
     )
