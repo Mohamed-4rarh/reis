@@ -1,17 +1,14 @@
 import { useState } from 'react';
 import Button from './Button';
-import { useNavigate } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 
 const PropertiesFilter = () => {
   const [purpose, setPurpose] = useState("for-rent");
   const [frequency, setFrequency] = useState("monthly");
   const [lang, setLang] = useState("en");
-  const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   const handleFilter = () => {
-    navigate({
-      pathname: '/properties',
-      search: `?purpose=${purpose}&frequency=${frequency}&lang=${lang}`
-    });
+    setSearchParams({purpose: purpose, frequency: frequency, lang: lang})
   }
   return (
     <div className="py-[30px] bg-[#EDEFF6]">
@@ -29,7 +26,9 @@ const PropertiesFilter = () => {
             name="purpose"
             id="purpose__selection"
           >
-            <option value="for-rent">For Rent</option>
+            <option value="for-rent">
+              {searchParams.get("purpose") || 'For Rent'}
+            </option>
             <option value="for-sale">For Sale</option>
           </select>
         </div>
@@ -46,7 +45,9 @@ const PropertiesFilter = () => {
             name="frequency"
             id="frequency__selection"
           >
-            <option value="monthly">Monthly</option>
+            <option value={"monthly"}>
+              {searchParams.get("frequency") || 'Monthly'}
+            </option>
             <option value="yearly">Yearly</option>
             <option value="weekly">Weekly</option>
             <option value="daily">Daily</option>
@@ -65,7 +66,9 @@ const PropertiesFilter = () => {
             name="lang"
             id="lang__selection"
           >
-            <option value="en">English</option>
+            <option value={"en"} className=' capitalize'>
+              {searchParams.get("lang") || 'English'}
+            </option>
             <option value="ar">Arabic</option>
           </select>
         </div>
