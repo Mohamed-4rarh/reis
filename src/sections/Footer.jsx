@@ -3,8 +3,8 @@ import { footerLinks, socialMediaIcons } from "../constants";
 
 const Footer = () => {
   return (
-    <section className="py-[50px] sm:px-[100px] px-5">
-      <div className=" 2xl:px-[100px] flex flex-wrap justify-between">
+    <section className="pt-[50px] sm:px-[100px] px-5">
+      <div className=" 2xl:px-[100px] flex flex-wrap justify-between pb-[30px] ">
         <div className="flex flex-col gap-[20px] items-start">
           <img src={logo} alt="logo" />
           <div className="flex flex-col gap-[13px]">
@@ -50,6 +50,21 @@ const Footer = () => {
             </ul>
           </div>
         ))}
+      </div>
+      <div className="w-full py-6 sm:px-[100px] px-0 text-center align-middle border-t-[1px] border-[#eedff6]">
+        <div className="text-[#6d737a] font-normal text-center">
+          <span>
+            Copyright{" "}
+            <span className="text-[#4a60a1] font-normal">
+              &copy; 2023 REIS.
+            </span>{" "}
+            All Rights Reserved,{" "} <br className="sm:hidden block" />
+          </span>
+          <span>
+            Developed By{" "}
+            <span className="text-[#4a60a1] font-normal">Mohamed Adham</span>{" "}
+          </span>
+        </div>
       </div>
     </section>
   );

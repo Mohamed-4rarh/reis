@@ -17,7 +17,7 @@ const Navbar = () => {
             <li
               key={nav.id}
               className={`${
-                index == navLinks.length - 1 ? "mr-0" : "mr-[25px]"
+                index == navLinks.length - 1 ? "mr-0" : "mr-[24px]"
               } hover:text-indigo-600`}
             >
               <Link

@@ -26,13 +26,8 @@ const PropertiesFilter = () => {
             name="purpose"
             id="purpose__selection"
           >
-            <option value="for-rent">
-              {searchParams.get("purpose") || 'Purpose'}
-            </option>
-            <option value="for-rent">
-              For Rent
-            </option>
-            <option value="for-sale">For Sale</option>
+            <option value="for-rent" selected={searchParams.get('purpose') == 'for-rent' ? true : false} >For Rent</option>
+            <option value="for-sale" selected={searchParams.get('purpose') == 'for-sale' ? true : false} >For Sale</option>
           </select>
         </div>
         <div className="flex gap-1">
@@ -48,15 +43,10 @@ const PropertiesFilter = () => {
             name="frequency"
             id="frequency__selection"
           >
-            <option value={"monthly"}>
-              {searchParams.get("frequency") || 'Frequency'}
-            </option>
-            <option value={"monthly"}>
-              Monthly
-            </option>
-            <option value="yearly">Yearly</option>
-            <option value="weekly">Weekly</option>
-            <option value="daily">Daily</option>
+            <option value="monthly" selected={searchParams.get('frequency') == 'monthly' ? true : false} >Monthly</option>
+            <option value="yearly" selected={searchParams.get('frequency') == 'yearly' ? true : false} >Yearly</option>
+            <option value="weekly" selected={searchParams.get('frequency') == 'weekly' ? true : false} >Weekly</option>
+            <option value="daily" selected={searchParams.get('frequency') == 'daily' ? true : false} >Daily</option>
           </select>
         </div>
         <div className="flex gap-1">
@@ -72,13 +62,8 @@ const PropertiesFilter = () => {
             name="lang"
             id="lang__selection"
           > 
-            <option value={"en"} className=' capitalize'>
-              {searchParams.get("lang") || 'Language'}
-            </option>
-            <option value={"en"} className=' capitalize'>
-              English
-            </option>
-            <option value="ar">Arabic</option>
+            <option value={"en"} className=' capitalize' selected={searchParams.get('lang') == 'en' ? true : false} >English</option>
+            <option value="ar" selected={searchParams.get('lang') == 'ar' ? true : false} >Arabic</option>
           </select>
         </div>
         <Button
