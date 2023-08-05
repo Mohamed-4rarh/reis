@@ -19,10 +19,6 @@ const ContactUs = () => {
       toast.error("This didn't work, All fields required!")
     }else {
       toast.success('Successfully Sent!')
-      setFirstName('')
-      setLastName('')
-      setEmail('')
-      setComments('')
     }
   }
   
