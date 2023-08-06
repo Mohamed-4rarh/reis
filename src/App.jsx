@@ -7,7 +7,6 @@ import {
 
 import Home from "./pages/Home";
 import Properties from "./pages/Properties";
-import Agents from "./pages/Agents";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
@@ -20,7 +19,6 @@ function App() {
       <Route path="/" element={<Root />}>
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
-        <Route path="agents" element={<Agents />} />
         <Route path="properties">
           <Route index element={<Properties />} />
           <Route path=":externalID" element={<PropertyPage />} />

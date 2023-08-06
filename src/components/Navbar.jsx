@@ -2,12 +2,11 @@ import { Link } from "react-router-dom";
 import { navLinks } from "../constants";
 import { logo, close, menu } from "../assets";
 import { useState } from "react";
-import Button from './Button'
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false)
   return (
-    <div className="w-full py-5 px-5 sm:px-[50px] justify-center bg-white shadow-md z-10 sticky top-0">
+    <div className="w-full py-5 px-5 sm:px-[85px] justify-center bg-white shadow-md z-10 sticky top-0">
       <nav className="flex items-center justify-between">
         <Link to="/">
           <img src={logo} alt="reis" />
@@ -18,20 +17,13 @@ const Navbar = () => {
               key={nav.id}
               className={`${
                 index == navLinks.length - 1 ? "mr-0" : "mr-[24px]"
-              } hover:text-indigo-600`}
+              } hover:text-indigo-600 uppercase font-medium`}
             >
-              <Link
-                to={nav.id}
-                className=" uppercase font-normal hover:font-semibold"
-              >
+              <Link to={nav.id}>
                 {nav.title}
               </Link>
             </li>
           ))}
-        </ul>
-        <ul className="sm:block hidden">
-          <Button text="Sign Up" color={"text-[#4a60a1]"} bg={"bg-[#Fff] mr-1"} />
-          <Button text="Log In" color={"text-[#FFF]"} bg={"bg-[#4a60a1]"} />
         </ul>
         <div className="lg:hidden block">
           <img
@@ -51,22 +43,13 @@ const Navbar = () => {
                   <Link
                     onClick={() => setToggle(false)}
                     to={nav.id}
-                    className=" uppercase font-normal hover:font-semibold"
+                    className=" uppercase font-normal hover:font-medium"
                   >
                     {nav.title}
                   </Link>
                 </li>
               ))}
-              <ul className="flex flex-col gap-5">
-                <li className="ml-7 text-[#4a60a1]">
-                  <a href="#">Sign Up</a>
-                </li>
-                <li className="ml-7 text-[#4a60a1]">
-                  <a href="#">Log In</a>
-                </li>
-              </ul>
             </ul>
-            
           </div>
         </div>
       </nav>

@@ -12,14 +12,14 @@ const Footer = () => {
               contact us
             </h3>
             <span className="text-[#6D737A] font-normal text-base">
-              call: +20 109 942 7902
+              call: +123 400 123
             </span>
             <p className="text-[#6D737A] font-normal text-base max-w-[470px]">
               Praesent nulla massa, hendrerit <br /> vestibulum gravida in,
               feugiat auctor felis.
             </p>
             <span className="text-[#363A3D] font-normal text-base">
-              Email: dev.mohamedadham@gmail.com
+              Email: realstate@mail.com
             </span>
           </div>
           <div className="flex flex-row flex-1 gap-[13px]">
