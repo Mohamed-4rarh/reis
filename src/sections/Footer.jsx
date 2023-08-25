@@ -4,8 +4,8 @@ import { footerLinks, socialMediaIcons } from "../constants";
 const Footer = () => {
   return (
     <section className="pt-[50px] sm:px-[100px] px-5">
-      <div className=" 2xl:px-[100px] flex flex-wrap justify-between pb-[30px] ">
-        <div className="flex flex-col gap-[20px] items-start">
+      <div className=" 2xl:px-[100px] flex-col text-center lg:flex-row flex flex-wrap justify-between pb-[30px] ">
+        <div className="flex flex-col gap-[20px] items-center lg:items-start">
           <img src={logo} alt="logo" />
           <div className="flex flex-col gap-[13px]">
             <h3 className="text-[31B1D1F] font-semibold text-2xl">
