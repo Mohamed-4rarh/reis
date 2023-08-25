@@ -34,8 +34,18 @@ import whatsapp from './icons/whatsapp.svg';
 import mobile from './icons/mobile.svg'
 import loadingGif from './icons/loading.gif'
 import dLoadingGif from './icons/dloading.gif'
+import about1 from './imgs/about1.jpg'
+import about2 from './imgs/about2.jpg'
+import about3 from './imgs/about3.jpg'
+import about4 from './imgs/about4.jpg'
+import about5 from './imgs/about5.jpg'
 
 export {
+  about1,
+  about4,
+  about5,
+  about2,
+  about3,
   loadingGif,
   dLoadingGif,
   mobile,
